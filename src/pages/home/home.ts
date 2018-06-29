@@ -32,7 +32,7 @@ export class HomePage implements OnInit {
        position: localizacion,
        map:map,
        title:'mi casa',
-     }); 
+     }); ///
    }
 }
 
