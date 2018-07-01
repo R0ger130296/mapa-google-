@@ -45,13 +45,14 @@ export class HomePage implements OnInit {
   }
   dibujo (){
     for(let i=0;i<=4;i++){
+      this.etiquetas.push(i.toString())
       this.valores.push(20);
     }
   }
 
   graficar() {
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
-      type: 'line',
+      type: 'pie',
       data: {
         labels: this.etiquetas,
         datasets: [
