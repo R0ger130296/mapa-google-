@@ -8,7 +8,7 @@ import { Chart } from 'chart.js';
 })
 export class HomePage implements OnInit {
   @ViewChild('lineCanvas') lineCanvas;
-  lineChart: any;
+  pieChart: any;
   etiquetas = [];
   valores = [];
   funcion = '';
@@ -35,7 +35,7 @@ derivada() {
 }
 
 graficar() {
-  this.lineChart = new Chart(this.lineCanvas.nativeElement, {
+  this.pieChart = new Chart(this.lineCanvas.nativeElement, {
     type: 'pie',
     data: {
       labels: this.etiquetas,
@@ -51,10 +51,11 @@ graficar() {
         ],
         borderColor: [
           'rgba(255,99,132,1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
+          'rgba(255,99,132,1)',
+          'rgba(255,99,132,1)',
+          'rgba(255,99,132,1)',
+          'rgba(255,99,132,1)',
+          
         ],
         borderWidth: 1
       }]
