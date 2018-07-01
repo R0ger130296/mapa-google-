@@ -16,31 +16,9 @@ export class HomePage implements OnInit {
 
   }
 
-  ngOnInit() {
-    this.derivada();
-    this.graficar();
-  }
-
-  calcular() {
-    this.funcion = 'Sin(x)';
-    let fx= 0;
-    for(let i = 0; i<=360 ; i++){
-      this.etiquetas.push(i.toString());
-      fx= Math.sin(i*Math.PI/180);
-      this.valores.push(fx);
-    }
-  }
-
-  derivada() {
-    this.funcion = 'd(Sin(x))/dx';
-    const h = 0.0000001;
-    let fx = 0;
-    for(let i = 0; i<=360 ; i++){
-      this.etiquetas.push(i.toString());
-      fx = Math.sin(i*Math.PI/180);
-      let fxMASh = Math.sin(i*Math.PI/180 + h);
-      let Derivada = (fxMASh - fx)/h;
-      this.valores.push(Derivada);
+  dibujo (){
+    for(let i=0;i<=4;i++){
+      this.valores.push(20);
     }
   }
 
