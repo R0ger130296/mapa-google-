@@ -18,7 +18,6 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.valores
-    this.etiquetas
     this.etiquetas=[""]
   }
 
