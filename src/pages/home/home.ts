@@ -46,7 +46,7 @@ export class HomePage implements OnInit {
 
   graficar() {
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
-      type: 'line',
+      type: 'done',
       data: {
         labels: this.etiquetas,
         datasets: [
