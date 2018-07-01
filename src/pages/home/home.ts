@@ -17,42 +17,15 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
-    this.derivada();
-    this.graficar();
+    this.valores
+    this.etiquetas
+    this.etiquetas=[""]
   }
 
-  calcular() {
-    this.funcion = 'Sin(x)';
-    let fx= 0;
-    for(let i = 0; i<=360 ; i++){
-      this.etiquetas.push(i.toString());
-      fx= Math.sin(i*Math.PI/180);
-      this.valores.push(fx);
-    }
-  }
-
-  derivada() {
-    this.funcion = 'd(Sin(x))/dx';
-    const h = 0.0000001;
-    let fx = 0;
-    for(let i = 0; i<=360 ; i++){
-      this.etiquetas.push(i.toString());
-      fx = Math.sin(i*Math.PI/180);
-      let fxMASh = Math.sin(i*Math.PI/180 + h);
-      let Derivada = (fxMASh - fx)/h;
-      this.valores.push(Derivada);
-    }
-  }
-  dibujo (){
-    for(let i=0;i<=4;i++){
-      this.etiquetas.push(i.toString())
-      this.valores.push(20);
-    }
-  }
 
   graficar() {
     this.lineChart = new Chart(this.lineCanvas.nativeElement, {
-      type: 'pie',
+      type: 'line',
       data: {
         labels: this.etiquetas,
         datasets: [
