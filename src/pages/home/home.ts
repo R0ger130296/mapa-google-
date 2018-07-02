@@ -25,7 +25,8 @@ derivada() {
   this.funcion = 'd(Sin(x))/dx';
   const h = 1;
   let part = 0;
-  for(let i = 0; i<=4 ; i++){
+  
+  for(let i = 0; i<=4; i++){
     this.etiquetas.push(i.toString());
     part = Math.round(Math.random());
     let num = Math.round(Math.random() + h);
